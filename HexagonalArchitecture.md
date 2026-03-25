@@ -350,23 +350,6 @@ Application → Điều phối use cases
 Adapters → Kết nối kỹ thuật
 ```
 
-#### Business Logic vs Infrastructure
-
-| Khía Cạnh  | Business Logic                           | Infrastructure                        |
-| ---------- | ---------------------------------------- | ------------------------------------- |
-| Quyết Định | Điều gì hợp lệ? Điều gì không được phép? | Lưu file, Kết nối DB, Parse input CLI |
-| Nằm Trong  | Entity, Domain Service, Use Case         | Adapter                               |
-| Đặc Điểm   | Quyết định logic nghiệp vụ               | Không quyết định luật nghiệp vụ       |
-
-#### Lỗi Thường Gặp
-
-| SAI                                        | ĐÚNG                           |
-| ------------------------------------------ | ------------------------------ |
-| CLI kiểm tra status hợp lệ                 | Adapter chỉ truyền dữ liệu     |
-| File adapter từ chối update sai trạng thái | Domain quyết định đúng/sai     |
-| Business rule nằm trong adapter            | Business rule nằm trong domain |
-
-Vi phạm SoC. Business logic bị phân tán.
 
 #### Configuration vs Implementation
 
